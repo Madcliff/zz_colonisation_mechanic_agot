@@ -1,0 +1,15 @@
+﻿on_game_start_after_lobby = {
+	on_actions = {
+		zz_agot_colonisation_on_game_start_after_lobby
+	}
+}
+
+
+zz_agot_colonisation_on_game_start_after_lobby = {
+	effect = { 
+		set_global_variable = {
+			name = zz_acm
+			value = 1 
+		}
+	}
+}

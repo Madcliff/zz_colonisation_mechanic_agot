@@ -1,0 +1,339 @@
+﻿zz_agot_colonisation_story = { #Used for the Scholarship progress event
+
+	on_setup = {
+        story_owner = {
+            var:colonisation_province = {
+			    save_scope_as = colonisation_province
+		    }
+		    remove_variable = colonisation_province
+		}
+        
+
+		set_variable = {
+			name = colonisation_progress
+			value = 120
+		}
+        set_variable = {
+			name = colonisation_province
+			value = scope:colonisation_province
+		}
+	}
+
+	on_end = {
+		story_owner = {
+		}
+	}
+
+	on_owner_death = {
+		if = {
+			limit = {exists = story_owner.primary_heir }
+			make_story_owner = story_owner.primary_heir
+		}
+		else = { end_story = yes }
+	}
+
+	effect_group = {
+		months = 1
+		triggered_effect = {
+            trigger = {
+                scope:story.var:colonisation_progress < 1
+            }
+            effect = {
+                scope:story = {
+					var:colonisation_province = {
+						save_scope_as = colonisation_province
+					}
+					story_owner = {
+						zz_agot_colonisation_claim_titles = yes
+					}
+                    end_story = yes
+                }
+            }
+        }
+        triggered_effect = {
+            trigger = {
+		        scope:story.var:colonisation_progress > 0
+            }
+            effect = {      
+				scope:story = {
+					var:colonisation_province = {
+						save_scope_as = colonisation_province
+					}
+				}     
+                story_owner = {
+                    random_list = {
+                        1 = {
+                            send_interface_toast = {
+                                title = zz_agot_colonisation_toast_01.t
+                                left_icon = THIS
+								right_icon = scope:colonisation_province.county
+								custom_tooltip = zz_agot_colonisation_toast_01.d
+								scope:story = {
+									change_variable = {
+										name = colonisation_progress
+										subtract = 1
+									}
+								}
+								
+                            }
+                        }
+                        1 = {
+                            send_interface_toast = {
+                                title = zz_agot_colonisation_toast_02.t
+                                left_icon = THIS
+                                right_icon = scope:colonisation_province.county
+								custom_tooltip = zz_agot_colonisation_toast_02.d
+								trigger_event = zz_agot_colonisation.0001
+                            }
+                        }
+                        1 = {
+                            send_interface_toast = {
+                                title = zz_agot_colonisation_toast_03.t
+                                left_icon = THIS
+                                right_icon = scope:colonisation_province.county
+                                custom_tooltip = zz_agot_colonisation_toast_03.d
+								scope:story = {
+									change_variable = {
+										name = colonisation_progress
+										subtract = 1
+									}
+								}
+                            }
+                        }
+                        1 = {
+                            send_interface_toast = {
+                                title = zz_agot_colonisation_toast_04.t
+                                left_icon = THIS
+                                right_icon = scope:colonisation_province.county
+                                custom_tooltip = zz_agot_colonisation_toast_04.d
+								scope:story = {
+									change_variable = {
+										name = colonisation_progress
+										subtract = 1
+									}
+								}
+                            }
+                        }
+                        1 = {
+                            send_interface_toast = {
+                               title = zz_agot_colonisation_toast_05.t
+                                left_icon = THIS
+                                right_icon = scope:colonisation_province.county
+                                custom_tooltip = zz_agot_colonisation_toast_05.d
+								scope:story = {
+									change_variable = {
+										name = colonisation_progress
+										subtract = 1
+									}
+								}
+                            }
+                        }
+                        1 = {
+                            send_interface_toast = {
+                               title = zz_agot_colonisation_toast_06.t
+                                left_icon = THIS
+                                right_icon = scope:colonisation_province.county
+                                custom_tooltip = zz_agot_colonisation_toast_06.d
+								scope:story = {
+									change_variable = {
+										name = colonisation_progress
+										subtract = 1
+									}
+								}
+                            }
+                        }
+						1 = {
+                            send_interface_toast = {
+                               title = zz_agot_colonisation_toast_07.t
+                                left_icon = THIS
+                                right_icon = scope:colonisation_province.county
+                                custom_tooltip = zz_agot_colonisation_toast_07.d
+								scope:story = {
+									change_variable = {
+										name = colonisation_progress
+										subtract = 1
+									}
+								}
+                            }
+                        }
+                        1 = {
+                            send_interface_toast = {
+                               title = zz_agot_colonisation_toast_08.t
+                                left_icon = THIS
+                                right_icon = scope:colonisation_province.county
+                                custom_tooltip = zz_agot_colonisation_toast_08.d
+								scope:story = {
+									change_variable = {
+										name = colonisation_progress
+										subtract = 1
+									}
+								}
+                            }
+                        }
+                        1 = {
+                            send_interface_toast = {
+                                title = zz_agot_colonisation_toast_09.t
+                                left_icon = THIS
+                                right_icon = scope:colonisation_province.county
+								custom_tooltip = zz_agot_colonisation_toast_09.d
+								trigger_event = zz_agot_colonisation.0002 ## plus 5
+                            }
+                        }
+                        1 = {
+                            send_interface_toast = {
+                               title = zz_agot_colonisation_toast_10.t
+                                left_icon = THIS
+                                right_icon = scope:colonisation_province.county
+                                custom_tooltip = zz_agot_colonisation_toast_10.d
+								scope:story = {
+									change_variable = {
+										name = colonisation_progress
+										subtract = 1
+									}
+								}
+                            }
+                        }
+                        1 = {
+                            send_interface_toast = {
+                                title = zz_agot_colonisation_toast_11.t
+                                left_icon = THIS
+                                right_icon = scope:colonisation_province.county
+								custom_tooltip = zz_agot_colonisation_toast_11.d
+								trigger_event = zz_agot_colonisation.0003 ## plus 3
+                            }
+                        }
+                        1 = {
+                             send_interface_toast = {
+                                title = zz_agot_colonisation_toast_12.t
+                                left_icon = THIS
+                                right_icon = scope:colonisation_province.county
+								custom_tooltip = zz_agot_colonisation_toast_12.d
+								trigger_event = zz_agot_colonisation.0004 ## minus 1
+                            }
+                        }
+                    }
+                }
+            }
+        }
+	}
+}
+
+zz_agot_restore_story = { #Used for the Scholarship progress event
+
+	on_setup = {
+        story_owner = {
+            var:restore_province = {
+			    save_scope_as = restore_province
+		    }
+		    remove_variable = restore_province
+		}
+        
+
+		set_variable = {
+			name = restore_progress
+			value = 120
+		}
+        set_variable = {
+			name = restore_province
+			value = scope:restore_province
+		}
+	}
+
+	on_end = {
+		story_owner = {
+		}
+	}
+
+	on_owner_death = {
+		if = {
+			limit = {exists = story_owner.primary_heir }
+			make_story_owner = story_owner.primary_heir
+		}
+		else = { end_story = yes }
+	}
+
+	effect_group = {
+		months = 1
+		triggered_effect = {
+            trigger = {
+                scope:story.var:restore_progress < 1
+            }
+            effect = {
+                scope:story = {
+					var:restore_province = {
+						save_scope_as = restore_province
+						save_scope_as = completed_ruin
+					}
+					story_owner = {
+						if = {
+							limit = {
+								scope:restore_province = title:b_summerhall.title_province
+							}
+							random_list = {
+								25 = {
+									modifier = {
+										factor = 0
+										has_global_variable = summerhall_egg_found
+									}
+									story_owner = { trigger_event = agot_ruins.2000 }
+								}
+								75 = {
+									trigger_event = agot_ruins.1000
+								}
+							}
+						}
+						trigger_event = agot_ruins.1000
+					}
+
+                    end_story = yes
+                }
+            }
+        }
+        triggered_effect = {
+            trigger = {
+		        scope:story.var:restore_progress > 0
+            }
+            effect = {      
+				scope:story = {
+					var:restore_province = {
+						save_scope_as = restore_province
+					}
+					change_variable = {
+						name = restore_progress
+						subtract = 1
+					}
+				}     
+                story_owner = {
+                }
+            }
+        }
+	}
+	effect_group = {
+		years = 1
+		
+        triggered_effect = {
+            trigger = {
+		        scope:story.var:restore_progress > 0
+            }
+            effect = {      
+				scope:story = {
+					var:restore_province = {
+						save_scope_as = restore_province
+					}
+				}     
+                story_owner = {
+					send_interface_toast = {
+						title = zz_agot_colonisation_toast_01.t
+						left_icon = THIS
+						custom_tooltip = "Ruins Progress"
+	
+						
+					}
+					trigger_event =  {
+						on_action = agot_filler_ruins_five_year_rebuild
+					}
+                }
+            }
+        }
+	}
+}

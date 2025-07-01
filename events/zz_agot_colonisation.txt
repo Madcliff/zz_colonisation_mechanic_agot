@@ -1,0 +1,228 @@
+﻿namespace = zz_agot_colonisation
+
+### Build new Housing
+
+zz_agot_colonisation.0001 = {
+	type = letter_event
+	opening = zz_agot_colonisation.0001.opening
+	sender = {
+		character = cp:councillor_steward
+		animation = throne_room_bow_1
+	}
+	desc = zz_agot_colonisation.0001.desc
+
+	trigger = {
+		cp:councillor_steward = {
+			is_alive = yes
+			is_imprisoned = no
+		}
+	}
+
+	on_trigger_fail = {
+	}
+
+	option = {
+		name = zz_agot_colonisation.0001.a
+		trigger = {
+			gold >= 200
+		}
+		custom_tooltip = zz_agot_colonisation.0001.a.tt
+		remove_short_term_gold = 200 
+		custom_tooltip  = {
+			text = zz_agot_colonisation_progress_10
+			scope:story = {
+				change_variable = {
+					name = colonisation_progress
+					subtract = 10
+				}
+			}
+		}
+		ai_chance = { base = 100 }
+	}
+
+	option = {
+		name = zz_agot_colonisation.0001.b
+		flavor = zz_agot_colonisation.0001.b.tt
+		ai_chance = {
+			base = -4
+		}
+		custom_description = {
+			text = zz_agot_colonisation_progress_01
+			scope:story = {
+				change_variable = {
+					name = colonisation_progress
+					subtract = 1
+				}
+			}
+		}
+	}
+}
+
+zz_agot_colonisation.0002 = {
+	type = letter_event
+	opening = zz_agot_colonisation.0002.opening
+	sender = {
+		character = cp:councillor_steward
+		animation = throne_room_bow_1
+	}
+	desc = zz_agot_colonisation.0002.desc
+
+	trigger = {
+		cp:councillor_steward = {
+			is_alive = yes
+			is_imprisoned = no
+		}
+	}
+
+	on_trigger_fail = {
+	}
+
+	option = {
+		name = zz_agot_colonisation.0002.a
+		trigger = {
+			gold >= 100
+		}
+		custom_tooltip = zz_agot_colonisation.0002.a.tt
+		remove_short_term_gold = 100 
+		custom_tooltip  = {
+			text = zz_agot_colonisation_progress_05
+			scope:story = {
+				change_variable = {
+					name = colonisation_progress
+					subtract = 5
+				}
+			}
+		}
+		ai_chance = { base = 100 }
+	}
+
+	option = {
+		name = zz_agot_colonisation.0002.b
+		flavor = zz_agot_colonisation.0002.b.tt
+		ai_chance = {
+			base = -4
+		}
+		custom_description = {
+			text = zz_agot_colonisation_progress_01
+			scope:story = {
+				change_variable = {
+					name = colonisation_progress
+					subtract = 1
+				}
+			}
+		}
+	}
+}
+
+zz_agot_colonisation.0003 = {
+	type = letter_event
+	opening = zz_agot_colonisation.0003.opening
+	sender = {
+		character = cp:councillor_steward
+		animation = throne_room_bow_1
+	}
+	desc = zz_agot_colonisation.0003.desc
+
+	trigger = {
+		cp:councillor_steward = {
+			is_alive = yes
+			is_imprisoned = no
+		}
+	}
+
+	on_trigger_fail = {
+	}
+
+	option = {
+		name = zz_agot_colonisation.0003.a
+		trigger = {
+			gold >= 200
+		}
+		custom_tooltip = zz_agot_colonisation.0003.a.tt
+		remove_short_term_gold = 50 
+		custom_tooltip  = {
+			text = zz_agot_colonisation_progress_03
+			scope:story = {
+				change_variable = {
+					name = colonisation_progress
+					subtract = 3
+				}
+			}
+		}
+		ai_chance = { base = 100 }
+	}
+
+	option = {
+		name = zz_agot_colonisation.0003.b
+		flavor = zz_agot_colonisation.0003.b.tt
+		ai_chance = {
+			base = -4
+		}
+		custom_description = {
+			text = zz_agot_colonisation_progress_01
+			scope:story = {
+				change_variable = {
+					name = colonisation_progress
+					subtract = 1
+				}
+			}
+		}
+	}
+}
+
+
+zz_agot_colonisation.0004 = {
+	type = letter_event
+	opening = zz_agot_colonisation.0004.opening
+	sender = {
+		character = cp:councillor_steward
+		animation = throne_room_bow_1
+	}
+	desc = zz_agot_colonisation.0004.desc
+
+	trigger = {
+		cp:councillor_steward = {
+			is_alive = yes
+			is_imprisoned = no
+		}
+	}
+
+	on_trigger_fail = {
+	}
+
+	option = {
+		name = zz_agot_colonisation.0004.a
+		trigger = {
+			gold >= 500
+		}
+		custom_tooltip = zz_agot_colonisation.0004.a.tt
+		remove_short_term_gold = 500 
+		custom_tooltip  = {
+			text = zz_agot_colonisation_progress_01
+			scope:story = {
+				change_variable = {
+					name = colonisation_progress
+					subtract = 1
+				}
+			}
+		}
+		ai_chance = { base = 100 }
+	}
+
+	option = {
+		name = zz_agot_colonisation.0004.b
+		flavor = zz_agot_colonisation.0004.b.tt
+		ai_chance = {
+			base = -4
+		}
+		custom_description = {
+			text = zz_agot_colonisation_setback_01
+			scope:story = {
+				change_variable = {
+					name = colonisation_progress
+					add = 1
+				}
+			}
+		}
+	}
+}

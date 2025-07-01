@@ -1,0 +1,68 @@
+﻿l_english:
+ zz_agot_colonisation_title: "[colonisation_province.GetName] Colonisation"
+ zz_agot_colonisation_province: "[colonisation_province.GetName]"
+ zz_agot_colonisation_progress_01: "Gain 1 Colonisation Progress"
+ zz_agot_colonisation_progress_03: "Gain 3 Colonisation Progress"
+ zz_agot_colonisation_progress_05: "Gain 5 Colonisation Progress"
+ zz_agot_colonisation_progress_10: "Gain 10 Colonisation Progress"
+ zz_agot_colonisation_setback_01: "Lose 1 Colonisation Progress"
+ 
+ zz_agot_colonisation_toast_01.t: "$zz_agot_colonisation_title$: Successful Hunt"
+ zz_agot_colonisation_toast_01.d: "Your steward reports that your colonisation party on $zz_agot_colonisation_province$ have been successful in hunting. \n$zz_agot_colonisation_progress_01$"
+ zz_agot_colonisation_toast_02.t: "$zz_agot_colonisation_title$: New Housing Constructed"
+ zz_agot_colonisation_toast_02.d: "Reports from your colony in $zz_agot_colonisation_province$ indicate the successful completion of a new shelter."
+ zz_agot_colonisation_toast_03.t: "$zz_agot_colonisation_title$: Local Communities"
+ zz_agot_colonisation_toast_03.d: "Your steward reports that your colonisation party on $zz_agot_colonisation_province$ have begun to establish their own particular customs and traditions \n$zz_agot_colonisation_progress_01$"
+ zz_agot_colonisation_toast_04.t: "$zz_agot_colonisation_title$: Good Crop Yields"
+ zz_agot_colonisation_toast_04.d: "Your steward reports that your colonisation party on $zz_agot_colonisation_province$ have have has a highly productive yield in grain crops. \n$zz_agot_colonisation_progress_01$"
+ zz_agot_colonisation_toast_05.t: "$zz_agot_colonisation_title$: New Edable Flora"
+ zz_agot_colonisation_toast_05.d: "Your steward reports that your colonisation party on $zz_agot_colonisation_province$ have found new food sources in a native plant that is safe to eat. \n$zz_agot_colonisation_progress_01$"
+ zz_agot_colonisation_toast_06.t: "$zz_agot_colonisation_title$: Happy Colonists"
+ zz_agot_colonisation_toast_06.d: "Your steward reports that your colonisation party on $zz_agot_colonisation_province$ are reporting satisfaction in their living conditions. \n$zz_agot_colonisation_progress_01$"
+ zz_agot_colonisation_toast_07.t: "$zz_agot_colonisation_title$: Pirates Repelled"
+ zz_agot_colonisation_toast_07.d: "Your steward reports that your colonisation party on $zz_agot_colonisation_province$ have fought off a band of privateers. \n$zz_agot_colonisation_progress_01$"
+ zz_agot_colonisation_toast_08.t: "$zz_agot_colonisation_title$: Hostile Wildlife Repelled"
+ zz_agot_colonisation_toast_08.d: "Your steward reports that your colonisation party on $zz_agot_colonisation_province$ have hunted and killed a hostile beast hunting their cattle. \n$zz_agot_colonisation_progress_01$"
+ zz_agot_colonisation_toast_09.t: "$zz_agot_colonisation_title$: Good Weather"
+ zz_agot_colonisation_toast_09.d: "Your steward reports that your colonisation party on $zz_agot_colonisation_province$ have been experiencing an extended period of good weather. \n$zz_agot_colonisation_progress_01$"
+ zz_agot_colonisation_toast_10.t: "$zz_agot_colonisation_title$: Successful Hunt"
+ zz_agot_colonisation_toast_10.d: "Your steward reports that your colonisation party on $zz_agot_colonisation_province$ have been successful in hunting. \n$zz_agot_colonisation_progress_01$"
+ zz_agot_colonisation_toast_11.t: "$zz_agot_colonisation_title$: Abundant Harvest"
+ zz_agot_colonisation_toast_11.d: "Your steward reports that your colonisation party on $zz_agot_colonisation_province$ have had an abundant harvest this year. \n$zz_agot_colonisation_progress_01$"
+ zz_agot_colonisation_toast_12.t: "$zz_agot_colonisation_title$: Slaver Raid"
+ zz_agot_colonisation_toast_12.d: "Your steward reports that your colonisation party on $zz_agot_colonisation_province$ have suffered an attack from slavers. \n$zz_agot_colonisation_setback_01$"
+
+
+ zz_agot_colonisation.0001.opening: "Greetings, glorious [ROOT.Char.GetTitleAsNameNoTooltip],"
+ zz_agot_colonisation.0001.desc: "It is my delight to inform you my liege that our progress in colonising the wilds of [colonisation_province.GetName] are well underway. \nThe local forces have been able to expand the permanent installations in the province, and are eager for the next shipment of colonists to make their way."
+
+ zz_agot_colonisation.0001.a: "They shall have whatever they need."
+ zz_agot_colonisation.0001.a.tt: "You receive an unpdate on $zz_agot_colonisation_title$"
+ zz_agot_colonisation.0001.b: "I lack the resources to send at this point in time."
+ zz_agot_colonisation.0001.b.tt: "You cannot aid the colonists!"
+
+ zz_agot_colonisation.0002.opening: "Greetings, glorious [ROOT.Char.GetTitleAsNameNoTooltip],"
+ zz_agot_colonisation.0002.desc: "It is my delight to inform you my liege that our progress in colonising the wilds of [colonisation_province.GetName] are well underway. \nThe local forces have been able to expand the permanent installations in the province, and are eager for the next shipment of colonists to make their way."
+
+ zz_agot_colonisation.0002.a: "They shall have whatever they need."
+ zz_agot_colonisation.0002.a.tt: "You receive an unpdate on $zz_agot_colonisation_title$"
+ zz_agot_colonisation.0002.b: "I lack the resources to send at this point in time."
+ zz_agot_colonisation.0002.b.tt: "You cannot aid the colonists!"
+
+ zz_agot_colonisation.0003.opening: "Greetings, glorious [ROOT.Char.GetTitleAsNameNoTooltip],"
+ zz_agot_colonisation.0003.desc: "It is my delight to inform you my liege that our progress in colonising the wilds of [colonisation_province.GetName] are well underway. \nThe present harvest has been well in excess of all expectations."
+
+ zz_agot_colonisation.0003.a: "Send sadditional seed"
+ zz_agot_colonisation.0003.a.tt: "You receive an unpdate on $zz_agot_colonisation_title$"
+ zz_agot_colonisation.0003.b: "I lack the resources to send at this point in time."
+ zz_agot_colonisation.0003.b.tt: "You cannot aid the colonists!"
+
+ zz_agot_colonisation.0004.opening: "Greetings, glorious [ROOT.Char.GetTitleAsNameNoTooltip],"
+ zz_agot_colonisation.0004.desc: "It is my regret to inform you my liege that our progress in colonising the wilds of [colonisation_province.GetName] has suffered a major setback. \nThe local forces were overcome by a raiding party of slavers who were able to carry off many into bondage."
+
+ zz_agot_colonisation.0004.a: "They send troops to reinforce the colonists."
+ zz_agot_colonisation.0004.a.tt: "You send additional troops to reinforce your $zz_agot_colonisation_title$"
+ zz_agot_colonisation.0004.b: "You cannot rienforce the colonists"
+ zz_agot_colonisation.0004.b.tt: "Your progress will suffer!"
+
+ zz_agot_ruin_begin_reconstruction: "Restore a Holding"

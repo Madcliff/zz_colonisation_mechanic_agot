@@ -1,0 +1,238 @@
+﻿# #Checks if holder is a ruin
+agot_isnt_ruin = {
+	scope = title
+	is_shown = {
+		holder ?= {
+			NOT = { has_trait = ruin }
+		}
+	}
+}
+
+agot_is_ruin = {
+	scope = title
+	is_shown = {
+		has_holding_type = ruin_holding
+		county ?= {
+			holder ?= { has_government = ruins_government }
+		}
+	}
+}
+
+zz_agot_is_unrestored = {
+	scope = title
+	is_shown = {
+		global_var:zz_acm = 1
+		has_holding_type = ruin_holding
+		NOT = {
+			county ?= {
+				holder ?= { has_government = ruins_government }
+			}
+		}
+	}
+}
+
+#Checks if holder is a ruin
+agot_is_reclaimed_ruin = {
+	scope = title
+	is_shown = {
+		has_province_modifier = agot_ruin_reconstruction
+	}
+}
+
+#Checks if character is not a ruin
+agot_is_ruin_char = {
+	scope = character
+	is_shown = {
+		has_trait = ruin
+	}
+}
+
+#Checks if character is not a ruin
+agot_not_ruin_char = {
+	scope = character
+	is_shown = {
+		NOT = {
+			has_trait = ruin
+		}
+	}
+}
+
+can_reconstruct_ruin = {
+	scope = province
+	is_valid = {
+		save_temporary_scope_as = ruin
+		scope:actor = {
+			NOT = {
+				any_owned_story = {
+					var:colonisation_province.county ?= scope:ruin.county
+				}
+			}
+		}
+		OR = {
+			scope:actor = {
+				any_sub_realm_county = {
+					any_neighboring_county = {
+						this = scope:ruin.county
+					}
+				}
+			}
+			scope:actor.primary_title = {
+				any_de_jure_county = {
+					this = scope:ruin.county
+				}
+			}
+			scope:actor = {
+				has_trait = dragonrider
+				NOT = {
+					any_owned_story = {
+						var:colonisation_province.county ?= scope:ruin.county
+					}
+				}
+			}
+			scope:actor = {
+				NOT = {
+					any_owned_story = {
+						var:colonisation_province.county ?= scope:ruin.county
+					}
+				}
+			}
+		}
+		trigger_if = {
+			limit = {
+				has_building = large_ruin_01
+			}
+			scope:actor = { gold >= 600 }
+		}
+		trigger_else_if = {
+			limit = {
+				has_building = medium_ruin_01
+			}
+			scope:actor = { gold >= 400 }
+		}
+		trigger_else_if = {
+			limit = {
+				has_building = small_ruin_01
+			}
+			scope:actor = { gold >= 200 }
+		}
+		trigger_else = {
+			always = no
+		}
+	}
+}
+
+reconstruct_ruin = {
+	scope = province
+	effect = {
+		if = {
+			limit = {
+				this = { has_building = large_ruin_01 }
+			}
+			scope:actor = { remove_short_term_gold = 600 }
+		}
+		else_if = {
+			limit = {
+				this = { has_building = medium_ruin_01 }
+			}
+			scope:actor = { remove_short_term_gold = 400 }
+		}
+		else = {
+			scope:actor = { remove_short_term_gold = 200 }
+		}
+		scope:actor = {
+			set_variable = {
+					name = colonisation_province 
+					value = PREV
+				}
+			create_story = {
+				type = zz_agot_colonisation_story
+				save_scope_as = story
+			}
+		}
+		
+	}
+}
+
+
+can_construct_holding = {
+	scope = province
+	is_valid = {
+		save_temporary_scope_as = ruin
+		scope:actor = {
+			NOT = {
+				any_owned_story = {
+					var:restore_province.county ?= scope:ruin.county
+				}
+			}
+		}
+		OR = {
+			scope:actor = {
+				any_sub_realm_county = {
+					any_neighboring_county = {
+						this = scope:ruin.county
+					}
+				}
+			}
+			scope:actor.primary_title = {
+				any_de_jure_county = {
+					this = scope:ruin.county
+				}
+			}
+			scope:actor = {
+				has_trait = dragonrider
+			}
+		}
+		trigger_if = {
+			limit = {
+				has_building = large_ruin_01
+			}
+			scope:actor = { gold >= 600 }
+		}
+		trigger_else_if = {
+			limit = {
+				has_building = medium_ruin_01
+			}
+			scope:actor = { gold >= 400 }
+		}
+		trigger_else_if = {
+			limit = {
+				has_building = small_ruin_01
+			}
+			scope:actor = { gold >= 200 }
+		}
+		trigger_else = {
+			always = no
+		}
+	}
+}
+construct_holding = {
+	scope = province
+	effect = {
+		if = {
+			limit = {
+				this = { has_building = large_ruin_01 }
+			}
+			scope:actor = { remove_short_term_gold = 600 }
+		}
+		else_if = {
+			limit = {
+				this = { has_building = medium_ruin_01 }
+			}
+			scope:actor = { remove_short_term_gold = 400 }
+		}
+		else = {
+			scope:actor = { remove_short_term_gold = 200 }
+		}
+		scope:actor = {
+			set_variable = {
+					name = restore_province 
+					value = PREV
+				}
+			create_story = {
+				type = zz_agot_restore_story
+				save_scope_as = story
+			}
+		}
+		
+	}
+}
