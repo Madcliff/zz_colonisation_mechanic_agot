@@ -275,7 +275,7 @@ zz_agot_restore_story = { #Used for the Scholarship progress event
 										factor = 0
 										has_global_variable = summerhall_egg_found
 									}
-									story_owner = { trigger_event = agot_ruins.2000 }
+									trigger_event = agot_ruins.2000
 								}
 								75 = {
 									trigger_event = agot_ruins.1000
